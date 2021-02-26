@@ -64,7 +64,7 @@ namespace EngageSharp
             var serializer = new JsonSerializer();
             serializer.Converters.Add(new StringEnumConverter());
             request.JsonSerializer = new EngageJsonSerializer(serializer);
-            request.Timeout = 15000;
+            request.Timeout = 30000;
 
             IRestResponse<T> execute = client.Execute<T>(request);
             
